@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sansation', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #9c0f0fd6;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-menu a:hover {
+    color: #510606;
+    background-color: #df5e5e;
+    border-radius: 4px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: white;
+}
+
+.catsa {
+    background: url('../wa_5/img/CATSAlogo.png') no-repeat center center/cover;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #4b5563;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
