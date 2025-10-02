@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 5 - In-Class Assignment</title>
+    <style>
+        html {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em 1em 1em 1em;
+            gap: 0rem;
+        }
+
+        .expand-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: #72ce97;
+            color: #000807;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .expand-btn:hover, .expand-btn:focus {
+            background: #2f8b54;
+            color: #fff;
+            outline: none;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        p {
+            font-size: 16px;
+        }
+        
+        .small-text {
+            font-size: 12px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: #2f8b54;
+        }
+
+        .card-content {
+            padding: 0 1.5em 1.5em 1.5em;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 2rem;
+            border: .2rem solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h3>Community Garden Project</h3>
+            <button class="expand-btn" aria-label="Expand card">+</button>
+        </div>
+        <div class="card-content hidden" style="display: none;">
+            <p class="summary">Join neighbors in creating a shared growing space...</p>
+            <div class="details">
+            <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+            <p>Contact: garden@community.org</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let info = false;
+
+        const expandBtn = document.querySelector('.expand-btn');
+        const details = document.querySelector('.card-content');
+
+        expandBtn.addEventListener('click', showInfo);
+
+        function showInfo() {
+            if (info == false) {
+                details.style.display = 'flex';
+                info = true;
+                expandBtn.textContent = '-'; 
+                expandBtn.setAttribute('aria-label', 'Collapse card');
+            } else {
+                details.style.display = 'none';
+                info = false;
+                expandBtn.textContent = '+';
+                expandBtn.setAttribute('aria-label', 'Expand card');
+            }
+        }
+    </script>
+
+</body>
+</html>

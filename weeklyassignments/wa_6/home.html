@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>CATSA - Home</title>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-brand">CATSA</div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+            <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="catsa">
+            <h1>Welcome to the Chinese and Taiwanese Student Association!</h1>
+            <p>Celebrating diversity, sharing traditions, and building community.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>CATSA is a student-run group that promotes cultural exchange and celebrates global traditions through events, workshops, and discussions.</p>
+        </section>
+
+        <section id="events" class="sidebar">
+            <h2>Upcoming Events</h2>
+            <div class="event-filters">
+                <button type="button" class="event-filter-btn" data-category="all">All</button>
+                <button type="button" class="event-filter-btn" data-category="food">Food</button>
+                <button type="button" class="event-filter-btn" data-category="language">Language</button>
+                <button type="button" class="event-filter-btn" data-category="fashion">Fashion</button>
+            </div>
+            <div class="events-grid">
+                <div class="event-card" data-category="food">
+                    <strong>International Food Night</strong>
+                    <span>October 25</span>
+                </div>
+                <div class="event-card" data-category="language">
+                    <strong>Language Exchange Café</strong>
+                    <span>November 10</span>
+                </div>
+                <div class="event-card" data-category="food">
+                    <strong>Dim Sum Brunch</strong>
+                    <span>November 15</span>
+                </div>
+                <div class="event-card" data-category="fashion">
+                    <strong>Cultural Fashion Show</strong>
+                    <span>December 2</span>
+                </div>
+                <div class="event-card" data-category="language">
+                    <strong>Mandarin Workshop</strong>
+                    <span>December 5</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="sidebar">
+            <h2>Resources</h2>
+            <li><a href="https://docs.google.com/document/d/1tJyek-MmLHGM7HKGamfIDIn08sOO_Ml-PjK0UEUjuCM/edit?usp=sharing">Link to WA6 Reflection</a></li>
+        </section>
+    </main>
+    <script src="wa6.js" defer></script>
+</body>
+</html>
