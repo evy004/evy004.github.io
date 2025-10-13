@@ -211,7 +211,7 @@ form button {
 }
 
 .event-filter-btn {
-    background: #df5e5e;
+    background: #9c0f0f;
     color: white;
     border: none;
     border-radius: 4px;
@@ -222,7 +222,8 @@ form button {
 
 .event-filter-btn:hover,
 .event-filter-btn:focus {
-    background: #9c0f0f;
+    background: #ec9b9b;
+    color: #510606
 }
 
 .a11y-select {
