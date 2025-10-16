@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f5ff;
+  font-family: sans-serif;
+}
+
+.click-btn {
+  background-color: #7b6ef6;
+  color: white;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 2em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(123, 110, 246, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.click-btn:hover {
+  transform: scale(1.05);
+  background-color: #917df8;
+  box-shadow: 0 6px 20px rgba(123, 110, 246, 0.5);
+}
+
+.click-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 10px rgba(123, 110, 246, 0.4);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;        
+    align-items: center;     
+    width: 100%;
+    max-width: 360px;
+}
+
+.links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: background 0.15s;
+}
+
+.links a:hover,
+.links a:focus {
+    background: #f0efff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .click-btn {
+    transition: none;
+  }
+  .click-btn:hover {
+    transform: none;
+    background-color: #917df8;
+  }
+}
