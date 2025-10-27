@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ica10.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <header>Guess the Anime Quote! ^-^</header>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+          <div class="quote-text" id="js-answer-text"></div>
+        </section>
+        <section class="guess-section">
+          <div class="guess-row">
+            <input id="js-guess-input" class="guess-input" type="text" placeholder="Guess the character who said this">
+            <button id="js-guess-btn" class="guess-btn">Guess</button>
+          </div>
+          <div id="js-guess-feedback" role="status" aria-live="polite"></div>
+
+          <div class="controls">
+            <button class="button new-quote" id="js-new-quote">New Quote</button>
+            <button class="button twitter" id="js-tweet">Reveal Answer</button>
+          </div>
+        </section>
+      </div>
+      <script src="ica10.js"></script>
+</body>
+</html>
