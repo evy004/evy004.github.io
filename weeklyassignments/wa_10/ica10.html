@@ -9,14 +9,16 @@
 </head>
 <body>
     <div class="app">
-        <header>Guess the Anime Quote! ^-^</header>
+        <header>Anime Quote Trivia</header>
         <section class="quotes">
+          <h3>Guess the Anime Quote! ^-^</h3>
           <div class="quote-text" id="js-quote-text"></div>
           <div class="quote-text" id="js-answer-text"></div>
         </section>
         <section class="guess-section">
           <div class="guess-row">
-            <input id="js-guess-input" class="guess-input" type="text" placeholder="Guess the character who said this">
+            <h3>Guess the character who said this:</h3>
+            <input id="js-guess-input" class="guess-input" type="text">
             <button id="js-guess-btn" class="guess-btn">Guess</button>
           </div>
           <div id="js-guess-feedback" role="status" aria-live="polite"></div>
@@ -27,6 +29,22 @@
           </div>
         </section>
       </div>
+      <footer class="page-footer">
+        <p>
+          My extension is that instead of having a quote and answer button, it's been reworked so that users can guess
+          the specific character who said the quote. On the negative side, the API only allows me to have 5 calls an hour,
+          which is pretty unfortunate. There is an input box and a guess button. When the user inputs their guess
+          and clicks the guess button, feedback is provided indicating whether the guess is correct or not. The user has a 
+          limited number of attempts to guess the correct character before the answer is revealed.
+        </p>
+        <p>
+          For a critique project I would pull anonymized player telemetry from a games API (skill rating,
+          role preference, latency, recent performance, behavioral tags) or a structured events feed.
+          That data would let me prototype and evaluate matching strategies (clustering by playstyle,
+          latency-aware pairing, fairness checks). Privacy would be prioritized: use aggregated records, 
+          keep personal preferences local unless users opt in, and provide clear controls for deleting stored data.
+        </p>
+      </footer>
       <script src="ica10.js"></script>
 </body>
 </html>
