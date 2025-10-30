@@ -1,0 +1,57 @@
+body {
+    font-family: 'Sour Gummy', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(226, 240, 252);
+    background-image: radial-gradient(#ffffff 10%, transparent 8%);
+    background-size: 30px 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 2px rgba(134, 134, 134, 0.268);
+}
+
+#dog-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+#dogImg {
+  display: block;
+  max-width: min(80vw, 600px);
+  width: 100%;
+  height: auto;
+  border: 6px solid white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.254);
+}
+
+#fetchBtn {
+  padding: 18px 36px;       
+  font-size: 1.4em;
+  font-family: 'Sour Gummy', Arial, sans-serif;         
+  background: #5090ff;
+  color: white;
+  border: none;
+  border-radius: 12px;      
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#fetchBtn:hover {
+  background: #5647ff;
+  transform: scale(1.05);   
+}
+
+@media (max-width: 480px) {
+  #dogImg { max-width: 90vw; }
+  #fetchBtn { width: 100%; max-width: 320px; }
+}
