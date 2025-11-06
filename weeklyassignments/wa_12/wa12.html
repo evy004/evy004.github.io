@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wa12.css">
+  <title>Random Pup of the Day 🐶</title>
+</head>
+<body>
+    <header role="banner" class="site-header">
+      <h1>🐾 Random Dog of the Day 🐶</h1>
+    </header>
+
+    <main id="main" role="main">
+      <section id="dog-section" aria-labelledby="dog-title">
+        <h2 id="dog-title" class="visually-hidden">Featured Dog Image</h2>
+
+        <img id="dogImg" src="https://via.placeholder.com/300x300?text=🐶" alt="Cute random dog">
+
+        <div class="controls-row">
+          <label for="breedSelect" class="breed-label">Choose a breed</label>
+          <select id="breedSelect" aria-label="Choose dog breed">
+              <option value="random">Random</option>
+              <option value="hound">Hound</option>
+              <option value="retriever">Retriever</option>
+              <option value="pug">Pug</option>
+              <option value="bulldog">Bulldog</option>
+              <option value="husky">Husky</option>
+          </select>
+
+          <button id="fetchBtn" aria-label="Show me a dog">Show me a dog!</button>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo" class="page-footer">
+      <p class="footer-note">
+        This demo shows one random dog image. Controls and preferences are stored locally in your browser.
+        To clear stored preferences, open your browser settings or use the Clear Data controls.
+      </p>
+    </footer>
+
+    <script src="wa12.js"></script>
+</body>
+</html>
