@@ -181,6 +181,34 @@
   animation-range: entry 100% contain 50%;
 }
 
+.cards .card {
+  aspect-ratio: 4 / 3;        /* or use fixed height if you prefer */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eee;           /* fallback color while image loads */
+  display: block;
+}
+
+/* make images cover the card area without distortion */
+.cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform-origin: center;
+  /* keep any existing entrance transforms/animations */
+}
+
+/* optional: subtle image load transition */
+.cards .card img {
+  opacity: 0;
+  transition: opacity .45s ease, transform .6s cubic-bezier(.2,.9,.2,1);
+}
+.cards .card img.loaded {
+  opacity: 1;
+}
+
 .popup-container {
   display: grid;
   gap: 1rem;
@@ -380,4 +408,3 @@ p + p {
     translate: 0 0%;
   }
 }
-
