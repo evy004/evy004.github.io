@@ -113,7 +113,7 @@
 
 .panel {
   box-shadow: var(--shadow-3);
-  background: var(--gray-1);
+  background: var(#8b5cf6);
 
   border-radius: var(--radius-3);
   color: var(--gray-8);
@@ -179,34 +179,6 @@
   animation: cardUp 1ms ease-out both, cardRotate 1ms ease-out forwards;
   animation-timeline: view(block);
   animation-range: entry 100% contain 50%;
-}
-
-.cards .card {
-  aspect-ratio: 4 / 3;        /* or use fixed height if you prefer */
-  overflow: hidden;
-  border-radius: 12px;
-  background: #eee;           /* fallback color while image loads */
-  display: block;
-}
-
-/* make images cover the card area without distortion */
-.cards .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transform-origin: center;
-  /* keep any existing entrance transforms/animations */
-}
-
-/* optional: subtle image load transition */
-.cards .card img {
-  opacity: 0;
-  transition: opacity .45s ease, transform .6s cubic-bezier(.2,.9,.2,1);
-}
-.cards .card img.loaded {
-  opacity: 1;
 }
 
 .popup-container {
