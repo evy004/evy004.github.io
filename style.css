@@ -73,7 +73,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--size-5);
+  gap: var(--size-4);
 
   .hero__title {
     font-size: var(--font-size-fluid-3);
@@ -337,12 +337,218 @@ a:hover {
   font-weight: var(--font-weight-7);
 }
 
-.footer {
-  height: 50dvh;
+/* -------------------------
+   PROJECTS PAGE GRID
+------------------------- */
+
+.projects-grid {
+  display: grid;
+  gap: var(--size-fluid-4);
+  margin-block-start: var(--size-fluid-4);
+
+  @container (width > 40rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  gap: 40px;
+  padding: 40px;
+}
+
+.project-card {
+  background: var(--gradient-2);
+  opacity: 0.75;
+  padding: var(--size-fluid-4);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-3);
+  color: var(--gray-1);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+
+  animation: reviewUp 1ms ease-out both;
+  animation-timeline: view(block);
+  animation-range: entry 30% contain 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(130, 85, 255, 0.25);
+}
+
+.project-card h3 {
+  font-size: var(--font-size-fluid-1);
+  margin-bottom: var(--size-fluid-2);
+}
+
+.project-card a {
+  color: #8255ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
 }
 
 p + p {
   margin-block: var(--size-fluid-2) 0;
+}
+
+/* -------------------------
+   ABOUT ME PAGE GRID
+------------------------- */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: black;
+  top: 2rem;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.timeline-container {
+  position: relative;
+  width: 50%;
+  padding: 1rem 2rem;
+}
+
+.timeline-container.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-container.right {
+  left: 50%;
+}
+
+.timeline-container .content {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 0;
+  display: block;
+  width: auto;
+  transform: translateY(20px);
+  transition: .6s ease;
+}
+
+.timeline-container .content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-container.left .content {
+  margin-left: auto;
+}
+
+.timeline-container.right .content {
+  margin-right: auto;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  background-color: #a020f0;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.timeline-container.left::before {
+  right: -8px;
+}
+
+.timeline-container.right::before {
+  left: -8px;
+}
+
+/* -------------------------
+   Activities section
+------------------------- */
+
+.section__title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hobbies-container {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.hobby-article {
+  background: #fff;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 1.5rem 0;
+}
+
+.hobby-article h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hobby-article p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* -------------------------
+   Mobile responsive timeline
+------------------------- */
+
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+
+  .timeline-container.left,
+  .timeline-container.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-container::before {
+    left: 6px;
+  }
+
+  .timeline-container .content {
+    margin: 0;
+    max-width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .6s ease;
+  }
+
+  .timeline-container .content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes calendarLargeAppear {
@@ -432,6 +638,16 @@ p + p {
   }
 }
 
+@keyframes scrollProjects {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .footer {
   text-align: center;
+  height: 50dvh;
 }
