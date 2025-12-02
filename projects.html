@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar">
-    <div class="logo">E.N.</div>
+        <div class="logo">E.N.</div>
         <ul class="nav-links">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -24,27 +24,62 @@
 
     <div class="container">
 
-    <section class="projects">
-        <div class="hero">
-        <h1 class="hero__title">Projects</h1>
-        </div>
-
-        <div class="projects-grid">
-            <div class="project-card">
-            <h2>Indie Game Portfolio</h2>
-            <p>A playful portfolio built with HTML, CSS, and Kaboom.js...</p>
+        <section class="projects">
+            <div class="hero">
+                <h1 class="hero__title">Projects</h1>
+                <div class="hero__payoff">For more, visit my <a href="https://github.com/evy004" target="_blank" rel="noopener noreferrer"><u>GitHub</u></a></div>
             </div>
 
-            <div class="project-card">
-            <h2>Dungeon Escape (C++)</h2>
-            <p>A full dungeon adventure game coded in C++...</p>
+            <!-- ========================= -->
+            <!--     CUSTOM CAROUSEL       -->
+            <!-- ========================= -->
+
+            <div class="carousel">
+                <div class="slides">
+
+                    <!-- 1 -->
+                    <div class="slide">
+                        <img src="resources/IndieGameSS.png" alt="Indie Game Portfolio">
+                        <div class="caption">
+                            <h3><a href="https://github.com/evy004/GamePortfolio.git" target="_blank" rel="noopener noreferrer">Indie Game Portfolio</a></h3>
+                            <p>Built with HTML, CSS, and Kaboom.js</p>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="slide">
+                        <img src="resources/DungeonEscape.png" alt="Dungeon Escape">
+                        <div class="caption">
+                            <h3><a href="https://github.com/evy004/DungeonEscape.git" target="_blank" rel="noopener noreferrer">Dungeon Escape</a></h3>
+                            <p>C++ adventure game with custom engine logic.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="slide">
+                        <img src="resources/HousingRecords.png" alt="Housing Prices Model">
+                        <div class="caption">
+                            <h3><a href="https://github.com/evy004/PredictingHousingPrices.git" target="_blank" rel="noopener noreferrer">Housing Prices</a></h3>
+                            <p>Machine learning analysis on Cook County housing data.</p>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="slide">
+                        <img src="resources/PortfolioSimulator.png" alt="Finance Portfolio Simulator">
+                        <div class="caption">
+                            <h3><a href="https://github.com/evy004/PortfolioSimulation.git" target="_blank" rel="noopener noreferrer">Monte Carlo Finance Simulator</a></h3>
+                            <p>Python-based tool for simulating investment portfolios.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CONTROLS -->
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
             </div>
 
-            <div class="project-card">
-            <h2>Predicting Housing Prices</h2>
-            <p>A data science project analyzing Cook County housing data...</p>
-            </div>
-        </div>
         </section>
     </div>
 
@@ -52,8 +87,8 @@
         <p>© 2025 Evy Ng — All Rights Reserved</p>
     </footer>
 
-    </div>
     <script src="main.js"></script>
+
 </body>
 
 </html>

@@ -109,6 +109,71 @@ a:hover {
   }
 }
 
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.tech-card {
+  background: #f7f7f7;
+  padding: 1.2rem;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: var(--shadow-2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-4);
+}
+
+.case-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.case-slide {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.case-slide.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.case-controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.case-controls button {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.case-controls button:hover {
+  background: #ececec;
+}
+
+.work-list {
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
 .calendar-container {
   overflow: hidden;
   position: relative;
@@ -340,57 +405,73 @@ a:hover {
 /* -------------------------
    PROJECTS PAGE GRID
 ------------------------- */
-
-.projects-grid {
-  display: grid;
-  gap: var(--size-fluid-4);
-  margin-block-start: var(--size-fluid-4);
-
-  @container (width > 40rem) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  gap: 40px;
-  padding: 40px;
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.project-card {
-  background: var(--gradient-2);
-  opacity: 0.75;
-  padding: var(--size-fluid-4);
-  border-radius: var(--radius-3);
-  box-shadow: var(--shadow-3);
-  color: var(--gray-1);
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
-
-  animation: reviewUp 1ms ease-out both;
-  animation-timeline: view(block);
-  animation-range: entry 30% contain 50%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(130, 85, 255, 0.25);
-}
-
-.project-card h3 {
-  font-size: var(--font-size-fluid-1);
-  margin-bottom: var(--size-fluid-2);
-}
-
-.project-card a {
-  color: #8255ff;
-  font-weight: 600;
+.carousel a {
+  color: inherit;
+  box-shadow: #333;
   text-decoration: none;
 }
 
-.project-card a:hover {
+.carousel a:hover {
   text-decoration: underline;
+  text-shadow: #8b5cf6;
 }
 
-p + p {
-  margin-block: var(--size-fluid-2) 0;
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.349);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.prev:hover,
+.next:hover {
+  background: rgba(0,0,0,0.65);
 }
 
 /* -------------------------
@@ -476,7 +557,7 @@ p + p {
 }
 
 /* -------------------------
-   Activities section
+   ACTIVITIES SECTION
 ------------------------- */
 
 .section__title {
@@ -513,7 +594,122 @@ p + p {
 }
 
 /* -------------------------
-   Mobile responsive timeline
+  CONTACT PAGE
+------------------------- */
+
+.contact-section {
+  max-width: 70rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gray-8);
+}
+
+.contact-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--gray-7);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #8255ff;
+  box-shadow: 0 0 0 3px rgba(130, 85, 255, 0.15);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: #8255ff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  justify-self: start;
+}
+
+.contact-form button:hover {
+  background: #6f42d4;
+  box-shadow: 0 4px 15px rgba(130, 85, 255, 0.3);
+}
+
+.contact-options ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin-bottom: 3rem;
+  list-style: none;
+}
+
+.contact-options a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border: 2px solid #555;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-options a:hover {
+  background-color: #a855f7;
+  border-color: #a855f7;
+  color: #fff;
+}
+
+/* -------------------------
+   RESPONSIVE CONTACT FORM
+------------------------- */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .contact-form button {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+/* -------------------------
+  FOR MOBILE DEVICES
 ------------------------- */
 
 @media (max-width: 768px) {
