@@ -1,10 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="1; url=inclassassignments/wa_14/wa14.html" />
-    <title>Redirecting...</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Evy Ng</title>
+    <link href="//unpkg.com/open-props@1.7.16/open-props.min.css" rel="stylesheet" />
+    <link href="//unpkg.com/open-props@1.7.16/normalize.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>If you are not redirected, <a href="inclassassignments/wa_14/wa14.html">click here</a>.</p>
+    <nav class="navbar">
+        <div class="logo">E.N.</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+    <div class="hero">
+      <h1 class="hero__title">Evy Ng</h1>
+
+      <div class="hero__payoff">Software Developer With an Affinity for Virtual Worlds</div>
+    </div>
+
+    <div class="divider-v">
+      <section class="section">
+        <div class="calendar-container">
+          <div class="calendar-wide">
+            <div class="calendar"></div>
+          </div>
+            <div class="calendar-mobile">
+              <div class="calendar">
+                <img src="resources/evypic.jpg" alt="Evy's Picture" />
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="section panel">
+        <div class="split-h">
+          <div class="grid-center">
+            <div class="panel__content">
+              <h3>Tools I Build With</h3>
+              <p>
+                My work blends programming, design, and rapid prototyping. These are the
+                technologies I use every day to build games, simulations, and interactive
+                experiences.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="tech-grid">
+              <div class="tech-card">C++</div>
+              <div class="tech-card">Unreal Engine 5</div>
+              <div class="tech-card">Python</div>
+              <div class="tech-card">JavaScript</div>
+              <div class="tech-card">Git</div>
+              <div class="tech-card">Blender</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section panel panel--no-overflow">
+        <div class="split-h">
+          <div class="cover-image">
+            <img class="test" src="resources/cafe.jpg" alt="Portfolio image" />
+          </div>
+
+          <div class="grid-center">
+            <div class="panel__content">
+              <h3>How I Approach My Work</h3>
+
+              <div class="case-carousel">
+                <div class="case-slide active">
+                  <h4>Dungeon Escape — C++ Systems</h4>
+                  <p>
+                    I rebuilt core gameplay systems like enemy pathfinding, collision
+                    logic, and state transitions using object-oriented C++. My goal was
+                    smooth movement and readable, reusable code.
+                  </p>
+                </div>
+
+                <div class="case-slide">
+                  <h4>Interactive Portfolio — HTML/Kaboom.js</h4>
+                  <p>
+                    I used Kaboom.js to bring small game-like interactions to the web.
+                    This project taught me how to balance playful design with responsive,
+                    accessible front-end development.
+                  </p>
+                </div>
+
+                <div class="case-slide">
+                  <h4>Predicting Housing Prices — Python</h4>
+                  <p>
+                    Built regression models with Pandas and scikit-learn to explore how
+                    feature engineering affects accuracy. Visualizations helped me validate
+                    patterns and present insights clearly.
+                  </p>
+                </div>
+
+                <div class="case-slide">
+                  <h4>BuffSpace — C++</h4>
+                  <p>
+                    I recreated the popular social media platform MySpace using C++ to explore 
+                    how social networking features like friend requests, messaging, and 
+                    profile customization could be implemented. This project helped me understand 
+                    the complexities of managing user data and designing scalable systems.
+                  </p>
+              </div>
+
+              <div class="case-controls">
+                <button class="case-prev">‹</button>
+                <button class="case-next">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section panel">
+        <div class="split-h">
+          <div class="panel__content">
+            <h3>How I Work</h3>
+
+            <p>
+              I enjoy taking ideas from rough sketches to polished, interactive systems.
+              My workflow focuses on rapid iteration, clear code structure, and constant
+              testing. Whether I'm building a gameplay mechanic or a Python model, I
+              try to keep each step small, measurable, and intentional.
+            </p>
+
+            <ul class="work-list">
+              <li>• Prototype fast — refine with feedback</li>
+              <li>• Build clean gameplay logic in C++ and UE5</li>
+              <li>• Add polish through animation and careful UX choices</li>
+              <li>• Document decisions to keep projects maintainable</li>
+            </ul>
+          </div>
+
+          <div class="grid-center">
+            <div class="spinner">
+              <div class="spinner__progress"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Some of 
+          <u><a href="projects.html">My Projects</a></u>:
+        </h2>
+        <div class="popup-container">
+          <div class="review">
+            <h3>
+                <a href="https://github.com/evy004/DungeonEscape.git">Dungeon Escape</a> -
+            </h3>
+            <p>
+                Using C++ and Object-Oriented Programming principles, I remade the popular game "Dungeon Escape," where players navigate through mazes while avoiding obstacles and collecting treasures.
+            </p>
+          </div>
+
+          <div class="review">
+            <h3>
+                <a href="https://github.com/evy004/GamePortfolio.git">Indie Game Portfolio</a> -
+            </h3>
+            <p>
+                Developed a stylistic portfolio website using HTML, CSS, and JavaScript (Kaboom.js) to showcase my love for games, complete with interactive elements and responsive design.
+            </p>
+          </div>
+
+          <div class="review">
+            <h3>
+                <a href="https://github.com/evy004/PredictingHousingPrices.git">Predicting Housing Prices</a> -
+            </h3>
+            <p>
+                Using Python and machine learning libraries like Pandas and Scikit-learn, I predicted and visualized housing prices based on various features, achieving high accuracy through data preprocessing and feature engineering.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© 2025 Evy Ng — All Rights Reserved</p>
+      </footer>
+    </div>
+  </div>
+  <script src="main.js"></script>
   </body>
 </html>
