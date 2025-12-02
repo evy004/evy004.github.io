@@ -402,6 +402,39 @@ a:hover {
   font-weight: var(--font-weight-7);
 }
 
+.intro-section .calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.intro-section .calendar-wide,
+.intro-section .calendar-mobile {
+  flex: 1 1 300px;
+}
+
+.intro-text {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--gray-8);
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-7);
+}
+
 /* -------------------------
    PROJECTS PAGE GRID
 ------------------------- */
@@ -744,6 +777,15 @@ a:hover {
   .timeline-container .content.show {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .intro-section .calendar-container {
+    flex-direction: column;
+  }
+  
+  .intro-text {
+    padding: 0;
+    text-align: center;
   }
 }
 
