@@ -1,4 +1,12 @@
 /* =============================
+  LIGHT/DARK MODE SWITCHER
+============================= */
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+/* =============================
   TIMELINE SCROLL OBSERVER
 ============================= */
 const timelineItems = document.querySelectorAll(".timeline-container");
@@ -12,6 +20,17 @@ const timelineObserver = new IntersectionObserver(entries => {
 });
 
 timelineItems.forEach(item => timelineObserver.observe(item));
+
+/* =============================
+  HAMBURGER NAVBAR BUTTON
+============================= */
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 
 /* =============================
   CASE STUDY CAROUSEL

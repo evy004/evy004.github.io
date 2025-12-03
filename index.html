@@ -17,6 +17,12 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
     </nav>
 
     <div class="container">
@@ -30,20 +36,22 @@
       <section class="section">
         <div class="calendar-container">
           <div class="calendar-wide">
-            <div class="calendar"></div>
+            <div class="calendar">
+              <div class="intro-text">
+              <h2>Hello, I'm Evy!</h2>
+              <p>
+                Welcome to my website :) I'm currently a senior studying computer science at CU Boulder,
+                passionate about creating interactive experiences! Here you'll find a selection of my 
+                projects and skills. Feel free to explore and reach out if you'd like to connect!
+              </p>
+              <button onclick="myFunction()">Toggle dark mode</button>
+            </div>
+            </div>
           </div>
             <div class="calendar-mobile">
               <div class="calendar">
                 <img src="resources/evypic.jpg" alt="Evy's Picture" />
               </div>
-            </div>
-            <div class="intro-text">
-              <h2>Hello, I'm Evy!</h2>
-              <p>
-                Welcome to my portfolio. I'm currently a senior studying computer science at CU Boulder 
-                passionate about creating interactive experiences! Here you'll find a selection of my 
-                projects and skills. Feel free to explore and reach out if you'd like to connect!
-              </p>
             </div>
         </div>
       </section>
@@ -85,7 +93,7 @@
 
               <div class="case-carousel">
                 <div class="case-slide active">
-                  <h4>Dungeon Escape — C++ Systems</h4>
+                  <a href="https://github.com/evy004/DungeonEscape.git"><h4>Dungeon Escape — C++ Systems</h4></a>
                   <p>
                     I rebuilt core gameplay systems like enemy pathfinding, collision
                     logic, and state transitions using object-oriented C++. My goal was
@@ -94,7 +102,7 @@
                 </div>
 
                 <div class="case-slide">
-                  <h4>Interactive Portfolio — HTML/Kaboom.js</h4>
+                  <a href="https://github.com/evy004/GamePortfolio.git"><h4>Interactive Portfolio — HTML/Kaboom.js</h4></a>
                   <p>
                     I used Kaboom.js to bring small game-like interactions to the web.
                     This project taught me how to balance playful design with responsive,
@@ -103,7 +111,7 @@
                 </div>
 
                 <div class="case-slide">
-                  <h4>Predicting Housing Prices — Python</h4>
+                  <a href="https://github.com/evy004/PredictingHousingPrices.git"><h4>Predicting Housing Prices — Python</h4></a>
                   <p>
                     Built regression models with Pandas and scikit-learn to explore how
                     feature engineering affects accuracy. Visualizations helped me validate
@@ -112,7 +120,7 @@
                 </div>
 
                 <div class="case-slide">
-                  <h4>BuffSpace — C++</h4>
+                  <a href <h4>BuffSpace — C++</h4>
                   <p>
                     I recreated the popular social media platform MySpace using C++ to explore 
                     how social networking features like friend requests, messaging, and 
