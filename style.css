@@ -958,18 +958,32 @@ a:hover {
     max-width: 100%;
     padding: 1rem;
   }
-  .timeline-container {
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    text-align: left;
-  }
+
   .timeline-container.left,
   .timeline-container.right {
     left: 0;
   }
   .timeline-container::before {
     left: 10px;
+  }
+  
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-right: 25px;
+    text-align: left; 
+  }
+
+  .timeline-container::before {
+    left: 22px; 
+    z-index: 100; 
+  }
+  
+  .timeline-container.right::before {
+    left: 22px;
   }
 
   /* HOBBIES / WORK */
