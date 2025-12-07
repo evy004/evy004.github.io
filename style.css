@@ -583,21 +583,31 @@ button:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
+  z-index: 10; 
+  
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: rgba(0, 0, 0, 0.3); 
   color: white;
   border: none;
-  font-size: 28px;
-  padding: 10px 14px;
-  cursor: pointer;
   border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px); 
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .prev:hover,
 .next:hover {
-  background: rgba(0,0,0,0.65);
+  background: var(--accent);
+  transform: translateY(-50%) scale(1.1); 
 }
 
 /* =============================
