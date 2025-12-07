@@ -1,83 +1,54 @@
 /* =============================
-  BASE STYLES
+  BASE STYLES & VARIABLES
 ============================= */
 :root {
+  /* Light Mode */
   --bg: #ffffff;
   --bg-alt: #eaeaea;
-  --text: #333;
+  --text: #333333;
+  --text-light: #666666;
   --card-bg: #f7f7f7;
   --border: #ddd;
-
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --section-bg: #f0f0f0; 
   --accent: #8255ff;
   --accent-hover: #6f42d4;
 }
 
-body {
-  .navbar {
-    background: var(--bg-alt);
-  }
-
-  .nav-links a {
-    color: var(--text);
-  }
-
-  .tech-card {
-    background: var(--card-bg);
-  }
-
-  .contact-form {
-    background: var(--bg);
-    border: 1px solid var(--border);
-  }
-}
-
-.dark-mode {
-  color: #e0e0e0;
-  --bg: #4c4c4c;
-  --bg-alt: #4f4f4f;
+body.dark-mode {
+  --bg: #121212;
+  --bg-alt: #1f1f1f;
   --text: #e0e0e0;
-  --card-bg: #1e1e1e;
+  --text-light: #a0a0a0;
+  --card-bg: #2a2a2a;
   --border: #333;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --section-bg: #1f1f1f;
   --accent: #bb86fc;
   --accent-hover: #9b59b6;
+}
 
-  h2 {
-    color: #e0e0e0;
-  }
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  h3 {
-    color: #e0e0e0;
-  }
+h1, h2, h3, h4, h5, h6, p, a {
+  color: var(--text);
+}
 
-  h4 {
-    color: #e0e0e0;
-  }
+a {
+  color: var(--text);
+  transition: 0.2s ease;
+}
 
-  h5 {
-    color: #e0e0e0;
-  }
-
-  p {
-    color: #e0e0e0;
-  }
-  .navbar {
-    background: var(--bg-alt);
-  }
-  .nav-links a {
-    color: var(--text);
-  }
-  .tech-card {
-    background: var(--card-bg);
-  }
-  .contact-form {
-    background: var(--bg);
-    border: 1px solid var(--border);
-  }
-
+a:hover {
+  color: var(--accent);
 }
 
 button {
-  background-color: #8255ff;
+  background-color: var(--accent);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -86,10 +57,11 @@ button {
   font-size: 1rem;
   margin-top: 1rem;
   width: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #6f42d4;
+  background-color: var(--accent-hover);
   box-shadow: 0 4px 6px rgba(139, 92, 246, 0.5);
   transform: translateY(-3px) scale(1.025);
 }
@@ -102,11 +74,12 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #eaeaea;
+  background: var(--bg-alt);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
+  transition: background 0.3s ease;
 }
 
 .nav-links {
@@ -118,12 +91,11 @@ button:hover {
 .nav-links a {
   text-decoration: none;
   font-weight: 500;
-  color: #333;
-  transition: 0.2s ease;
+  color: var(--text);
 }
 
 .nav-links a:hover {
-  color: #8255ff; 
+  color: var(--accent); 
 }
 
 .hamburger {
@@ -139,17 +111,9 @@ button:hover {
   display: block;
   width: 100%;
   height: 3px;
-  background: #333;
+  background: var(--text);
   border-radius: 2px;
   transition: 0.3s;
-}
-
-a {
-  color: #333;
-}
-
-a:hover {
-  color: #8255ff; 
 }
 
 /* =============================
@@ -242,19 +206,19 @@ a:hover {
 }
 
 .tech-card {
-  background: #f7f7f7;
+  background: var(--card-bg);
   padding: 1.2rem;
   text-align: center;
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
   box-shadow: var(--shadow-2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
 }
 
 .tech-card:hover {
   transform: translateY(-6px);
-  background-color: #8b5cf6;
+  background-color: var(--accent);
   color: white;
   box-shadow: var(--shadow-4);
 }
@@ -292,7 +256,7 @@ a:hover {
 }
 
 .case-controls button:hover {
-  background: #ececec;
+  background: var(--bg-alt);
 }
 
 .work-list {
@@ -356,10 +320,11 @@ a:hover {
 
 .panel {
   box-shadow: var(--shadow-3);
-  background: var(#8b5cf6);
-
+  /* CHANGED: Use the new section-bg variable instead of accent color */
+  background: var(--section-bg);
   border-radius: var(--radius-3);
-  color: var(--gray-8);
+  /* CHANGED: Use the main text color variable for contrast */
+  color: var(--text);
 
   code {
     color: var(--text-1);
@@ -455,12 +420,12 @@ a:hover {
   --entry-step: calc((100% - var(--entry-start)) / (var(--count) + 1));
   --entry: calc(var(--entry-start) + var(--index) * var(--entry-step));
 
-  background: var(--gray-1);
+  background: var(--card-bg);
   width: 100%;
   border-radius: var(--radius-3);
   padding: var(--size-fluid-4);
 
-  color: var(--gray-8);
+  color: var(--text);
 
   animation: reviewUp 1ms ease-out both;
   animation-timeline: view(block);
@@ -481,12 +446,12 @@ a:hover {
   width: 10rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 10px solid var(--gray-0);
+  border: 10px solid var(--accent);
 
   display: grid;
   place-items: center;
 
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow);
 
   animation: radialProgress 1ms ease-out forwards;
   animation-timeline: view(block);
@@ -503,8 +468,8 @@ a:hover {
   aspect-ratio: 1;
   background: conic-gradient(
     from 0deg,
-    #8b5cf6 0deg,
-    #8b5cf6 var(--progress, 0deg),
+    var(--accent) 0deg,
+    var(--accent) var(--progress, 0deg),
     transparent var(--progress, 0deg)
   );
 
@@ -554,13 +519,13 @@ a:hover {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: var(--gray-1);
+  color: #ffffff;
 }
 
 .intro-text p {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--gray-1);
+  color: #ffffff;
 }
 
 /* =============================
@@ -607,7 +572,7 @@ a:hover {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(0, 0, 0, 0.349);
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 10px 15px;
   border-radius: 8px;
@@ -649,7 +614,7 @@ a:hover {
   content: '';
   position: absolute;
   width: 4px;
-  background-color: black;
+  background-color: var(--text);
   top: 2rem;
   bottom: 2rem;
   left: 50%;
@@ -673,7 +638,7 @@ a:hover {
 }
 
 .timeline-container .content {
-  background-color: white;
+  background-color: var(--bg-alt);
   padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -703,8 +668,8 @@ a:hover {
   top: 28px;
   width: 16px;
   height: 16px;
-  background-color: #a020f0;
-  border: 3px solid white;
+  background-color: var(--accent);
+  border: 3px solid var(--bg);
   border-radius: 50%;
   z-index: 10;
 }
@@ -726,6 +691,7 @@ a:hover {
   font-weight: 800;
   margin-top: 4rem;
   margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
 .hobbies-container {
@@ -735,7 +701,7 @@ a:hover {
 }
 
 .hobby-article {
-  background: #fff;
+  background: var(--card-bg);
   padding: 1.75rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -746,12 +712,13 @@ a:hover {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
+  color: var(--text);
 }
 
 .hobby-article p {
   font-size: 1rem;
   line-height: 1.7;
-  color: #333;
+  color: var(--text);
 }
 
 /* =============================
@@ -771,11 +738,11 @@ a:hover {
   font-weight: 800;
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--gray-8);
+  color: var(--text);
 }
 
 .contact-form {
-  background: #fff;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
@@ -785,7 +752,7 @@ a:hover {
 
 .contact-form label {
   font-weight: 600;
-  color: var(--gray-7);
+  color: var(--text);
 }
 
 .contact-form input,
@@ -793,16 +760,18 @@ a:hover {
   width: 100%;
   padding: 0.8rem 1rem;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   font-size: 1rem;
   font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #8255ff;
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(130, 85, 255, 0.15);
 }
 
@@ -812,8 +781,8 @@ a:hover {
 }
 
 .contact-form button {
-  background: #8255ff;
-  color: #fff;
+  background: var(--accent);
+  color: white;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
   font-weight: 700;
@@ -825,7 +794,7 @@ a:hover {
 }
 
 .contact-form button:hover {
-  background: #6f42d4;
+  background: var(--accent-hover);
   box-shadow: 0 4px 15px rgba(130, 85, 255, 0.3);
 }
 
@@ -840,18 +809,18 @@ a:hover {
 
 .contact-options a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text);
   font-weight: bold;
   padding: 0.6rem 1rem;
-  border: 2px solid #555;
+  border: 2px solid var(--border);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .contact-options a:hover {
-  background-color: #a855f7;
-  border-color: #a855f7;
-  color: #fff;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
 }
 
 /* =============================
@@ -877,7 +846,7 @@ a:hover {
     position: absolute;
     top: 60px; 
     right: 0;
-    background: #eaeaea;
+    background: var(--bg-alt);
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -886,6 +855,7 @@ a:hover {
     transition: max-height 0.3s ease;
     padding: 0;
     margin: 0;
+    z-index: 1000;
   }
 
   .nav-links li {
