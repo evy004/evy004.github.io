@@ -320,10 +320,8 @@ button:hover {
 
 .panel {
   box-shadow: var(--shadow-3);
-  /* CHANGED: Use the new section-bg variable instead of accent color */
   background: var(--section-bg);
   border-radius: var(--radius-3);
-  /* CHANGED: Use the main text color variable for contrast */
   color: var(--text);
 
   code {
@@ -446,7 +444,7 @@ button:hover {
   width: 10rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 10px solid var(--accent);
+  border: 10px solid var(--card-bg);
 
   display: grid;
   place-items: center;
