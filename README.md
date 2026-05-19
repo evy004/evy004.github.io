@@ -1,12 +1,6 @@
 # Evy Ng's Portfolio
 
-Welcome to my personal portfolio website! This website showcases my projects, skills, and achievements. It’s built with HTML, CSS, JavaScript, and Spline.
-
-## Features
-
-- Interactive design with custom 3D elements.
-- Links to my professional profiles (LinkedIn, GitHub).
-- Resume download feature.
+Welcome to my personal portfolio website! This website showcases my projects, skills, and achievements.
 
 ## Technologies Used
 
