@@ -2,70 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Evy Ng | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Evy Ng is a computer science and creative technology student building interactive web experiences, game-inspired interfaces, and data-driven tools." />
+  <title>Evy Ng | Software & Creative Technology Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23fbfaf7'/%3E%3Crect x='8' y='8' width='48' height='48' fill='none' stroke='%231f2430' stroke-width='4'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-size='20' font-family='Arial,sans-serif' font-weight='700' fill='%231f2430'%3EEN%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Evy Ng home">EN</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-copy">
+        <p class="eyebrow">Computer Science + Creative Technology</p>
+        <h1>Evy Ng builds playful, useful software with a designer's eye.</h1>
+        <p class="hero-text">
+          I am a CU Boulder student interested in software development, AI/LLMs,
+          interactive media, and visual design. My work blends technical systems
+          with thoughtful interfaces, from game-like portfolios to finance simulations.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">View Projects</a>
+          <a class="button secondary" href="files/resume.pdf" download="Evy_Ng_Resume.pdf">Download Resume</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Portfolio highlights">
+        <div class="availability">Open to internships, creative coding, and product work</div>
+        <dl class="quick-stats">
+          <div>
+            <dt>Focus</dt>
+            <dd>Full-stack foundations, data tools, UI design</dd>
+          </div>
+          <div>
+            <dt>Community</dt>
+            <dd>T9Hacks software lead, CATSA co-vice president</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Boulder, Colorado</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section-pad work-section" id="work">
+      <div class="section-heading">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Projects with a clear point of view</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <img class="project-visual" src="files/game-room.png" alt="Pixel art room from Evy's interactive Game Portfolio project">
+          <div class="project-meta">
+            <span>Interactive Web</span>
+            <span>Kaboom.js</span>
+            <span>Pixel Art</span>
+          </div>
+          <h3>Game Portfolio</h3>
+          <p>
+            A personal portfolio built as an explorable 2D room. Visitors move with
+            WASD or arrow keys, discover hotspots, and open modals for projects,
+            experience, and background.
+          </p>
+          <div class="project-actions">
+            <a class="text-link" href="https://github.com/evy004/GamePortfolio" target="_blank" rel="noreferrer">View Project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="chart-visual" aria-label="Stylized efficient frontier chart">
+            <span class="axis x-axis"></span>
+            <span class="axis y-axis"></span>
+            <span class="frontier-line"></span>
+            <span class="chart-point max-sharpe"></span>
+            <span class="chart-point min-risk"></span>
+          </div>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Finance</span>
+            <span>Optimization</span>
+          </div>
+          <h3>Portfolio Simulation</h3>
+          <p>
+            A Modern Portfolio Theory tool that uses historical stock data, Monte
+            Carlo simulation, and numerical optimization to visualize the efficient
+            frontier and compare max-Sharpe and minimum-variance allocations.
+          </p>
+          <div class="project-actions">
+            <a class="text-link" href="https://github.com/evy004/PortfolioSimulation" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Portfolio</span>
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+          <h3>Personal Website</h3>
+          <p>
+            This portfolio site organizes my projects, leadership experience, and
+            technical interests into a cleaner professional home base.
+          </p>
+          <div class="project-actions">
+            <a class="text-link" href="https://github.com/evy004/EvysWebsite" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad about-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Creative problem solving, grounded in code</h2>
+      </div>
+      <div class="about-layout">
+        <p>
+          Hi, I'm Evy (like the Pokémon)! I'm a Computer Science major with a Creative Technology and
+          Design minor at the University of Colorado Boulder. I like building
+          things that feel fun and are nice to look at, whether that is an
+          interactive game world, a data visualization, or a polished web interface.
+        </p>
+        <div class="skill-list" aria-label="Skills and interests">
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>HTML/CSS</span>
+          <span>Data Visualization</span>
+          <span>Game Interfaces</span>
+          <span>AI/LLMs</span>
+          <span>Graphic Design</span>
+          <span>Community Leadership</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad experience-section" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Work experience and education</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="timeline-date">Feb 2026 - Present</p>
+          <div>
+            <span class="timeline-label">Creative Producer</span>
+            <h3>EVOKE - World Bank</h3>
+            <p>Developed a Python and FastAPI badge system to automate in-game student achievement rewards, and designed an Open WebUI AI interface in Minecraft that teaches educational concepts through gamified narratives.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">Aug 2025 - Present</p>
+          <div>
+            <span class="timeline-label">Co-Founder & Lead Frontend Engineer</span>
+            <h3>Rent-A-Buff</h3>
+            <p>Built the product interface with React and TypeScript, implementing style guides, and connecting the UI to Convex backend queries for smoother data flow across the platform.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">Jun 2025 - Dec 2025</p>
+          <div>
+            <span class="timeline-label">Research Assistant</span>
+            <h3>University of Colorado Boulder</h3>
+            <p>Developed a Python Random Forest model to estimate indoor PM2.5 levels with 85% predictive accuracy, and created Pandas cleaning pipelines for 50,000+ records to improve dataset integrity.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">May 2024 - Sep 2024</p>
+          <div>
+            <span class="timeline-label">Game Programmer</span>
+            <h3>Hottop Games</h3>
+            <p>Built and optimized C++ gameplay systems in Unreal Engine, improving frame rate and stability while collaborating through Agile sprints and Git-based development workflows.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">Apr 2023 - May 2026</p>
+          <div>
+            <span class="timeline-label">Course Assistant</span>
+            <h3>University of Colorado Boulder</h3>
+            <p>Tutored 1000+ students in C++ and object-oriented programming principles through recitations, assignments, and course support.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <p class="timeline-date">Aug 2022 - May 2026</p>
+          <div>
+            <span class="timeline-label">Education</span>
+            <h3>University of Colorado Boulder</h3>
+            <p>B.S. in Computer Science with a minor in Creative Technology and Design. Dean's List student and active member of Society of Women Engineers and Society of Asian Scientists and Engineers.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something awesome.</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:evy.xng@gmail.com">Email Me</a>
+        <a class="button secondary" href="https://github.com/evy004" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button secondary" href="https://linkedin.com/in/evy-ng" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
   <script src="script.js"></script>
-  <div class="container">
-    <!-- Replace the URL below with your Spline Public URL -->
-     <div id="spline-container">
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
-        <spline-viewer url="https://prod.spline.design/0Y6UOXkJhonnf1oc/scene.splinecode"></spline-viewer>
-     </div>
-    <div class="intro-text">Welcome to Evy's creative bubble!</div>
-    <button class="nav-btn" onclick="window.location.href='#about'">Explore</button>
-  </div>
-    <!-- About Me Section -->
-    <div class="about-container">
-      <div class="about-me">
-        <h1>About Me</h1>
-        <p>Hi! My name is Evy (yes, like the pokemon), and I am currently pursuing a major in Computer Science and a minor in Creative Technology and Design. I have a passion for AI/LLMs, software development, and graphic design. I also am a big part of CU Boulder's T9Hacks and CATSA (Chinese and Taiwanese Student Association)!</p>
-      </div>
-      <div class="stats">
-        <h2>Name: Evy Ng</h2>
-        <p>Pronouns: She/Her/Hers</p>
-        <p>School: University of Colorado Boulder</p>
-        <p>Age: 21 Years</p>
-        <p>Hometown: Colorado Springs, CO</p>
-        <button class="download-btn">Download Resume</button>
-      </div>
-    </div>
-    <!-- Projects Section -->
-    <div class="projects-container">
-      <h1>Projects</h1>
-      <div class="project-card">
-        <h2>Project 1: AI Chatbot</h2>
-        <p>A chatbot that uses OpenAI's GPT-3 to answer questions about CU Boulder.</p>
-        <button class="view-btn">View Project</button>
-      </div>
-      <div class="project-card">
-        <h2>Project 2: Personal Website</h2>
-        <p>This portfolio website showcases my skills and projects.</p>
-        <button class="view-btn">View Project</button>
-      </div>
-      <div class="project-card">
-        <h2>Project 3: Mobile App</h2>
-        <p>A mobile app that helps students manage their time effectively.</p>
-        <button class="view-btn">View Project</button>
-      </div>
-    </div>
-    <!-- Contact Section -->
-    <div class="contact-container">
-      <div class="social-links">
-      <a href="https://github.com/evy004" target="_blank">
-        <img src="files/github-mark-white.png" alt="GitHub" class="icon">
-      </a>
-      <a href="https://linkedin.com/in/evy-ng" target="_blank">
-        <img src="files/InBug-White.png" alt="LinkedIn" class="icon">
-      </a>
-      <a href="mailto:evy.ng2003@gmail.com">
-        <img src="files/mail.png" alt="Email" class="icon">
-      </a>
-      </div>
-    </div>
 </body>
 </html>
